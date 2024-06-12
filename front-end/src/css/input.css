@@ -1,3 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer utilities {
+   .pricing-card {
+      @apply border border-[#CBCFCF] rounded-lg lg:rounded-none flex flex-col;
+   }
+
+   .pricing-card-heading {
+      @apply h-[76px] text-[#ffffff] text-[16px] flex items-center pl-8 rounded-t-lg lg:rounded-t-none;
+   }
+
+   .pricing-card-details {
+      @apply pl-8 pr-6 flex flex-col h-full;
+   }
+
+   .pricing-card-details-heading {
+      @apply text-[#131313] text-[14px] leading-6;
+   }
+
+   .pricing-card-details-cta {
+      @apply font-medium rounded text-base leading-8 px-5 py-2.5 inline-flex justify-center w-full text-center focus:outline-none;
+   }
+
+   .pricing-card-details-bullet {
+      @apply bg-pricing_card_bullet bg-no-repeat flex items-start;
+   }
+
+   .pricing-card-details-title {
+      @apply text-2xl font-semibold tracking-tight;
+   }
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar {
+   -webkit-appearance: none;
+   width: 10px;
+   height: 10px;
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-track {
+   background: rgba(0, 0, 0, 0.1);
+   border-radius: 0;
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-thumb {
+   cursor: pointer;
+   border-radius: 5px;
+   background: rgba(0, 0, 0, 0.25);
+   -webkit-transition: color 0.2s ease;
+   transition: color 0.2s ease;
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-thumb:window-inactive {
+   background: rgba(0, 0, 0, 0.15);
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-thumb:hover {
+   background: rgba(128, 135, 139, 0.8);
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-track {
+   background: rgba(255, 255, 255, 0.1);
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-thumb {
+   background: rgba(255, 255, 255, 0.25);
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-thumb:window-inactive {
+   background: rgba(255, 255, 255, 0.15);
+}
+
+.client-wrapper .client-slider::-webkit-scrollbar-thumb:hover {
+   background: rgba(255, 255, 255, 0.35);
+}

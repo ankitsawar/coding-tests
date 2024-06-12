@@ -2,16 +2,869 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>New Relic Coding Test</title>
-    <link href="src/css/output.css" rel="stylesheet">
-    <script src="src/js/index.js" type="text/javascript"></script>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>New Relic Coding Test</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet">
+
+   <link href="src/css/output.css" rel="stylesheet">
+   <script src="src/js/index.js" type="text/javascript"></script>
+
 </head>
 
 <body>
- <header></header>
- <main></main>
- <footer></footer>
+   <header class="lg:h-[95px] md:h-[80px] h-[64px] bg-white flex items-center fixed z-10 w-screen bg-[#ffffff]">
+      <nav class="p-4 bg-gray-800 text-gray-200 container mx-auto">
+         <div class="flex justify-between items-center">
+            <div class="flex items-center">
+               <img src="./src/images/new-relic-logo.png" alt="New Relic" srcset="">
+            </div>
+
+            <!-- MOBILE NAV ICON -->
+            <div class="lg:hidden flex items-center">
+               <a href="">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M10.1125 17.225C8.70577 17.225 7.33065 16.8078 6.161 16.0263C4.99136 15.2448 4.07974 14.134 3.54141 12.8343C3.00308 11.5347 2.86223 10.1046 3.13667 8.72492C3.4111 7.34523 4.0885 6.0779 5.0832 5.0832C6.0779 4.0885 7.34522 3.4111 8.72491 3.13667C10.1046 2.86223 11.5347 3.00308 12.8343 3.54141C14.134 4.07974 15.2448 4.99136 16.0263 6.16101C16.8078 7.33065 17.225 8.70578 17.225 10.1125C17.225 11.0465 17.041 11.9714 16.6836 12.8343C16.3261 13.6973 15.8022 14.4813 15.1418 15.1418C14.4813 15.8022 13.6972 16.3261 12.8343 16.6836C11.9714 17.041 11.0465 17.225 10.1125 17.225ZM10.1125 4.29318C8.96154 4.29318 7.83644 4.63448 6.87946 5.27391C5.92248 5.91335 5.1766 6.8222 4.73615 7.88554C4.2957 8.94888 4.18046 10.119 4.405 11.2478C4.62954 12.3766 5.18377 13.4135 5.99762 14.2274C6.81146 15.0412 7.84836 15.5955 8.9772 15.82C10.106 16.0445 11.2761 15.9293 12.3394 15.4888C13.4028 15.0484 14.3116 14.3025 14.9511 13.3455C15.5905 12.3886 15.9318 11.2634 15.9318 10.1125C15.9318 9.34829 15.7813 8.59157 15.4888 7.88554C15.1964 7.17951 14.7677 6.53799 14.2274 5.99762C13.687 5.45725 13.0455 5.0286 12.3394 4.73615C11.6334 4.4437 10.8767 4.29318 10.1125 4.29318Z"
+                        fill="#54565A" />
+                     <path
+                        d="M19.9003 20.8119L14.1176 15.1764L15.0293 14.2647L20.812 19.9002C20.9324 20.0214 21 20.1852 21 20.3561C21 20.5269 20.9324 20.6908 20.812 20.8119C20.6908 20.9323 20.5269 20.9999 20.3561 20.9999C20.1853 20.9999 20.0214 20.9323 19.9003 20.8119Z"
+                        fill="#54565A" />
+                  </svg>
+
+               </a>
+               <button aria-label="navigation" type="button" id="bars"
+                  class="lg:hidden ml-4 text-gray-200 transition duration-300 focus:outline-none focus:text-white hover:text-white">
+                  <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <rect width="24" height="3" rx="1.5" fill="#54565A" />
+                     <rect y="7" width="24" height="3" rx="1.5" fill="#54565A" />
+                     <rect y="14" width="24" height="3" rx="1.5" fill="#54565A" />
+                  </svg>
+               </button>
+            </div>
+
+            <!-- NAVIGATION - LARGE SCREENS -->
+            <div class="hidden lg:flex">
+               <ul class="hidden lg:flex">
+                  <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Products</a></li>
+                  <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Pricing</a></li>
+                  <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Solutions</a></li>
+                  <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Help Center</a></li>
+                  <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">About</a></li>
+                  <!-- <li class="text-lg pr-8 "><a href=""
+                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                     style="text-underline-offset: 8px;">Home</a></li>
+               <li class="text-lg pr-8"><a href=""
+                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                     style="text-underline-offset: 8px;">About</a></li>
+               <li class="text-lg pr-8"><a href=""
+                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                     style="text-underline-offset: 8px;">Blog</a></li>
+               <li class="text-lg pr-8"><a href=""
+                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+                     style="text-underline-offset: 8px;">Contact</a></li> -->
+               </ul>
+            </div>
+
+            <div class="hidden lg:flex">
+               <ul class="flex items-center">
+                  <li class="mx-3">
+                     <a href="">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M10.1125 17.225C8.70577 17.225 7.33065 16.8078 6.161 16.0263C4.99136 15.2448 4.07974 14.134 3.54141 12.8343C3.00308 11.5347 2.86223 10.1046 3.13667 8.72492C3.4111 7.34523 4.0885 6.0779 5.0832 5.0832C6.0779 4.0885 7.34522 3.4111 8.72491 3.13667C10.1046 2.86223 11.5347 3.00308 12.8343 3.54141C14.134 4.07974 15.2448 4.99136 16.0263 6.16101C16.8078 7.33065 17.225 8.70578 17.225 10.1125C17.225 11.0465 17.041 11.9714 16.6836 12.8343C16.3261 13.6973 15.8022 14.4813 15.1418 15.1418C14.4813 15.8022 13.6972 16.3261 12.8343 16.6836C11.9714 17.041 11.0465 17.225 10.1125 17.225ZM10.1125 4.29318C8.96154 4.29318 7.83644 4.63448 6.87946 5.27391C5.92248 5.91335 5.1766 6.8222 4.73615 7.88554C4.2957 8.94888 4.18046 10.119 4.405 11.2478C4.62954 12.3766 5.18377 13.4135 5.99762 14.2274C6.81146 15.0412 7.84836 15.5955 8.9772 15.82C10.106 16.0445 11.2761 15.9293 12.3394 15.4888C13.4028 15.0484 14.3116 14.3025 14.9511 13.3455C15.5905 12.3886 15.9318 11.2634 15.9318 10.1125C15.9318 9.34829 15.7813 8.59157 15.4888 7.88554C15.1964 7.17951 14.7677 6.53799 14.2274 5.99762C13.687 5.45725 13.0455 5.0286 12.3394 4.73615C11.6334 4.4437 10.8767 4.29318 10.1125 4.29318Z"
+                              fill="#54565A" />
+                           <path
+                              d="M19.9003 20.8119L14.1176 15.1764L15.0293 14.2647L20.812 19.9002C20.9324 20.0214 21 20.1852 21 20.3561C21 20.5269 20.9324 20.6908 20.812 20.8119C20.6908 20.9323 20.5269 20.9999 20.3561 20.9999C20.1853 20.9999 20.0214 20.9323 19.9003 20.8119Z"
+                              fill="#54565A" />
+                        </svg>
+                     </a>
+                  </li>
+                  <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Log in</a></li>
+                  <li class="mx-3">
+                     <a class="px-3 text-[16px] text-[#ffffff] inline-block h-[48px] leading-[48px] rounded-lg bg-[#00838F]"
+                        href="">
+                        Sign up
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+         <!-- MOBILE MENU -->
+         <div id="mobileMenu" class="hidden flex w-full mx-auto py-8 text-center fixed bg-[#ffffff] shadow-md left-0">
+            <div class="flex flex-col justify-center items-center w-full px-4">
+               <li class="block py-1"><a class="text-[16px] text-[#54565A] leading-8" href="">Products</a>
+               </li>
+               <li class="block py-1"><a class="text-[16px] text-[#54565A] leading-8" href="">Pricing</a>
+               </li>
+               <li class="block py-1"><a class="text-[16px] text-[#54565A] leading-8" href="">Solutions</a>
+               </li>
+               <li class="block py-1"><a class="text-[16px] text-[#54565A] leading-8" href="">Help
+                     Center</a>
+               </li>
+               <li class="block py-1"><a class="text-[16px] text-[#54565A] leading-8" href="">About</a>
+               </li>
+               <li class="block py-1">
+                  <a class="text-[16px] text-[#54565A] leading-8" href="">Log in</a>
+               </li>
+               <li class="block py-1">
+                  <a class="px-3 text-[16px] text-[#ffffff] inline-block h-[48px] leading-[48px] rounded-lg bg-[#00838F]"
+                     href="">
+                     Sign up
+                  </a>
+               </li>
+               <!-- <a href="#"
+               class="block text-gray-200 cursor-pointer py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+               style="text-underline-offset: 8px;">Home</a>
+            <a href="#"
+               class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+               style="text-underline-offset: 8px;">About</a>
+            <a href="#"
+               class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+               style="text-underline-offset: 8px;">Blog</a>
+            <a href="#"
+               class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
+               style="text-underline-offset: 8px;">Contact</a> -->
+            </div>
+         </div>
+      </nav>
+   </header>
+   <main class="lg:pt-[95px] md:px-4 md:pt-[80px] sm:px-4 pt-[64px]">
+      <section class="bg-[#ffffff]">
+         <div class="container md:container sm:container mx-auto ">
+            <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+               <div class="hidden md:block">
+                  <h1 class="text-[40px] font-normal leading-12 text-[#2C2C2C] ">
+                     Simple, transparent pricing plans. <br />Only pay for what you use.
+                  </h1>
+                  <p class="text-[#54565A] font-normal text-[16px] leading-7 py-3">
+                     Start for free. No credit card required.
+                  </p>
+               </div>
+               <div class="block md:hidden">
+                  <h1 class=" text-[40px] font-normal leading-[48px] text-[#2C2C2C]">
+                     Simple usage-based pricing
+                  </h1>
+                  <p class="text-[#54565A] font-normal text-[16px] leading-7 py-3">
+                     Start for free. Then pay a predictable per-user price and $0.25 per GB as your needs grow.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section>
+         <div class="container mx-auto"></div>
+      </section>
+
+      <section>
+         <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 lg:gap-0 sm:grid-cols-1 shadow-lg">
+               <div class="pricing-card lg:border-r-0 lg:rounded-l-lg">
+                  <div class="pricing-card-heading bg-[#0AB0BF] lg:rounded-tl-lg">
+                     Free
+                  </div>
+                  <div class="pricing-card-details">
+                     <div class="h-full flex flex-col py-5">
+                        <div class="flex-1">
+                           <h4 class="pricing-card-details-heading h-[60px]">
+                              For individuals just getting started with New Relic or test projects.
+                           </h4>
+                        </div>
+                        <div class="flex items-baseline flex-1">
+                           <span class="pricing-card-details-title">$0</span>
+                           <span class="ms-1 text-base font-normal text-[#2C2C2C]">/ Forever</span>
+                        </div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 100 GBs / month free <br />
+                                 <span class="italic">
+                                    $0.25 / GB beyond
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 1 free full platform user <br />
+                                 <span class="italic">
+                                    Access to all capabilities
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet invisible">invisible</li>
+                        </ul>
+                        <div class="flex-1">
+                           <button type="button" class="pricing-card-details-cta  text-[#ffffff] bg-[#00838F]">
+                              Choose plan
+                           </button>
+                        </div>
+                        <div class="!mt-6 !mb-4 border-t border-[#CBCFCF]"></div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Unlimited basic users, <br />
+                                 <span>
+                                    queries, dashboards & alerts
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Standard retention
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet invisible">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Standard retention
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet invisible">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Standard retention
+                              </span>
+                           </li>
+
+                        </ul>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="pricing-card lg:border-r-0">
+                  <div class="pricing-card-heading bg-[#0069CE] lg:rounded-none">
+                     Standard
+                  </div>
+                  <div class="pricing-card-details">
+                     <div class="h-full flex flex-col py-5">
+                        <div class="flex-1">
+                           <h4 class="pricing-card-details-heading h-[60px]">
+                              For growing teams monitoring production apps.
+                           </h4>
+                        </div>
+                        <div class="flex items-baseline flex-1">
+                           <span class="pricing-card-details-title">$0.25</span>
+                           <span class="ms-1 text-base font-normal text-[#2C2C2C]">/ GB</span>
+                        </div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 100 GBs / month free <br />
+                                 <span class="italic">
+                                    $0.25 / GB beyond
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 $99 / full platform user <br />
+                                 <span class="italic">
+                                    Includes 1 free, max of 5
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 $49 / Core User
+                              </span>
+                           </li>
+                        </ul>
+                        <div class="flex-1">
+                           <button type="button" class="pricing-card-details-cta text-[#ffffff] bg-[#00838F]">
+                              Choose plan
+                           </button>
+                        </div>
+                        <div class="!mt-6 !mb-4 border-t border-[#CBCFCF]"></div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Unlimited basic users, <br />
+                                 <span>
+                                    queries, dashboards & alerts
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Standard retention
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bulle invisible">
+                              Standard retention
+                           </li>
+                           <li class="pricing-card-details-bullet invisible">
+                              Standard retention
+                           </li>
+                        </ul>
+
+                     </div>
+
+                  </div>
+               </div>
+               <div class="pricing-card lg:border-r-0">
+                  <div class="pricing-card-heading bg-[#FF8853] lg:rounded-none">
+                     Pro
+                  </div>
+                  <div class="pricing-card-details">
+                     <div class="h-full flex flex-col py-5">
+                        <div class="flex-1">
+                           <h4 class="pricing-card-details-heading h-[60px]">
+                              For teams and companies with more than 5 engineers and complex workloads.
+                           </h4>
+                        </div>
+                        <div class="flex items-baseline text-gray-900 dark:text-white flex-1">
+                           <span class="pricing-card-details-title">Contact for pricing</span>
+                        </div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 100 GBs / month free <br />
+                                 <span class="italic">
+                                    $0.25 / GB beyond
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Predictable full platform & core user commit pricing <br />
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet invisible">invisible</li>
+                        </ul>
+                        <div class="flex-1">
+                           <button type="button"
+                              class="pricing-card-details-cta text-[#00838F] border border-[#00838F]">
+                              Contact Sales
+                           </button>
+                        </div>
+                        <div class="!mt-6 !mb-4 border-t border-[#CBCFCF]"></div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Unlimited basic users, <br />
+                                 <span>
+                                    queries, dashboards & alerts
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Extended retention
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Advanced admin features
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 24x7 support availability
+                              </span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="pricing-card lg:border-r-0">
+                  <div class="pricing-card-heading bg-[#FF8853] lg:rounded-none">
+                     Enterprise
+                  </div>
+                  <div class="pricing-card-details">
+                     <div class="h-full flex flex-col py-5">
+                        <div class="flex-1">
+                           <h4 class="pricing-card-details-heading h-[60px]">
+                              For companies with advanced security and support needs. 
+                           </h4>
+                        </div>
+                        <div class="flex items-baseline text-gray-900 dark:text-white flex-1">
+                           <span class="pricing-card-details-title">Contact for pricing</span>
+                        </div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 100 GBs / month free <br />
+                                 <span class="italic">
+                                    $0.25 / GB beyond
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Predictable full platform & core user commit pricing
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet invisible">invisible</li>
+                        </ul>
+                        <div class="flex-1">
+                           <button type="button"
+                              class="pricing-card-details-cta text-[#00838F] border border-[#00838F]">
+                              Contact Sales
+                           </button>
+                        </div>
+                        <div class="!mt-6 !mb-4 border-t border-[#CBCFCF]"></div>
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Unlimited basic users, <br />
+                                 <span>
+                                    queries, dashboards & alerts
+                                 </span>
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Extended retention
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 Enterprise admin, security & compliance features
+                              </span>
+                           </li>
+                           <li class="pricing-card-details-bullet">
+                              <span class="text-sm text-[#2C2C2C] ml-5">
+                                 24x7 designated support + priority ticket routing
+                              </span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="py-16 hidden lg:block">
+         <div class="container mx-auto">
+            <h3 class="text-2xl font-semibold text-[#2C2C2C] text-center py-16 tracking-tighter">
+               Compare features and plans
+               <svg class="mx-auto" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="32" height="32" fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M9.51743 12.2604C9.17029 11.9132 8.60748 11.9132 8.26035 12.2604C7.91321 12.6075 7.91321 13.1703 8.26035 13.5175L15.3715 20.6286C15.7186 20.9757 16.2814 20.9757 16.6285 20.6286L23.7396 13.5175C24.0868 13.1703 24.0868 12.6075 23.7396 12.2604C23.3925 11.9132 22.8297 11.9132 22.4826 12.2604L16.0001 18.7429L9.51743 12.2604Z"
+                     fill="#2C2C2C" />
+               </svg>
+            </h3>
+            <div class="relative overflow-x-auto sm:rounded-lg">
+               <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                  <thead class=" bg-gray-50">
+                     <tr class="border-b border-[#EEEFEF]">
+                        <th scope="col" class="px-6 py-3"></th>
+                        <th scope="col"
+                           class="px-6 py-3 border-t-4 border-t-[#0AB0BF] border-x border-[#EEEFEF] text-center font-semibold text-base text-[#2C2C2C] bg-[#FAF9F9]">
+                           Free
+                        </th>
+                        <th scope="col"
+                           class="px-6 py-3 border-t-4 border-t-[#0069CE] border-x border-[#EEEFEF] text-center font-semibold text-base text-[#2C2C2C] bg-[#FAF9F9]">
+                           Standard
+                        </th>
+                        <th scope="col"
+                           class="px-6 py-3 border-t-4 border-t-[#FF8853] border-x border-[#EEEFEF] text-center font-semibold text-base text-[#2C2C2C] bg-[#FAF9F9]">
+                           Pro
+                        </th>
+                        <th scope="col"
+                           class="px-6 py-3 border-t-4 border-t-[#2C2C2C] border-x border-[#EEEFEF] text-center font-semibold text-base text-[#2C2C2C] bg-[#FAF9F9]">
+                           Enterprise
+                        </th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="bg-white border-b border-[#EEEFEF]">
+                        <th scope="row" class="px-6 py-4 whitespace-nowrap text-sm font-bold uppercase text-[#2C2C2C]">
+                           Data Usage
+                        </th>
+
+                     </tr>
+                     <tr class="bg-white border-b border-[#EEEFEF]">
+                        <th scope="row" class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#2C2C2C]">
+                           Free limits
+                        </th>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           100GB free / month
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           100GB free / month
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           100GB free / month
+                        </td>
+                        <td class="px-6 py-4 text-center text-sm font-normal text-[#2C2C2C]">
+                           100GB free / month
+                        </td>
+                     </tr>
+                     <tr class="bg-white border-b border-[#EEEFEF]">
+                        <th scope="row" class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#2C2C2C]">
+                           Cost per GB
+                        </th>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           N/A
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           $0.25 / GB beyond  free limit
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           N/A
+                        </td>
+                        <td class="px-6 py-4 text-center text-sm font-normal text-[#2C2C2C]">
+                           N/A
+                        </td>
+                     </tr>
+                     <tr class="bg-white border-b border-[#EEEFEF]">
+                        <th scope="row" class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#2C2C2C]">
+                           Retention
+                        </th>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           8+ days
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           8+ days
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           Extended
+                        </td>
+                        <td class="px-6 py-4 text-center text-sm font-normal text-[#2C2C2C]">
+                           Extended
+                        </td>
+                     </tr>
+                     <tr class="bg-white border-b border-[#EEEFEF]">
+                        <th scope="row" class="px-6 py-4 whitespace-nowrap text-sm font-normal text-[#2C2C2C]">
+                           HIPAA compliance
+                        </th>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                              viewBox="0 0 26 26" fill="none">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#EEEFEF" />
+                              <path
+                                 d="M19 8.2L17.8 7L13 11.8L8.2 7L7 8.2L11.8 13L7 17.8L8.2 19L13 14.2L17.8 19L19 17.8L14.2 13L19 8.2Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                              viewBox="0 0 26 26" fill="none">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#EEEFEF" />
+                              <path
+                                 d="M19 8.2L17.8 7L13 11.8L8.2 7L7 8.2L11.8 13L7 17.8L8.2 19L13 14.2L17.8 19L19 17.8L14.2 13L19 8.2Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                              viewBox="0 0 26 26" fill="none">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#EEEFEF" />
+                              <path
+                                 d="M19 8.2L17.8 7L13 11.8L8.2 7L7 8.2L11.8 13L7 17.8L8.2 19L13 14.2L17.8 19L19 17.8L14.2 13L19 8.2Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                        <td class="px-6 py-4 text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#68696E" />
+                              <path
+                                 d="M7.615 12.846L6 14.461L10.308 18.769L20 9.615L18.385 8L10.308 15.538L7.615 12.846Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                     </tr>
+                     <tr class="bg-white border-b border-[#EEEFEF]">
+                        <th scope="row"
+                           class="px-6 py-4 text-gray-900 whitespace-nowrap text-sm font-normal text-[#2C2C2C]">
+                           FedRAMP
+                        </th>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                              viewBox="0 0 26 26" fill="none">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#EEEFEF" />
+                              <path
+                                 d="M19 8.2L17.8 7L13 11.8L8.2 7L7 8.2L11.8 13L7 17.8L8.2 19L13 14.2L17.8 19L19 17.8L14.2 13L19 8.2Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                              viewBox="0 0 26 26" fill="none">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#EEEFEF" />
+                              <path
+                                 d="M19 8.2L17.8 7L13 11.8L8.2 7L7 8.2L11.8 13L7 17.8L8.2 19L13 14.2L17.8 19L19 17.8L14.2 13L19 8.2Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                        <td class="px-6 py-4 border-x border-[#EEEFEF] text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                              viewBox="0 0 26 26" fill="none">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#EEEFEF" />
+                              <path
+                                 d="M19 8.2L17.8 7L13 11.8L8.2 7L7 8.2L11.8 13L7 17.8L8.2 19L13 14.2L17.8 19L19 17.8L14.2 13L19 8.2Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                        <td class="px-6 py-4 text-center text-sm font-normal text-[#2C2C2C]">
+                           <svg class="mx-auto" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M13 26C20.1797 26 26 20.1797 26 13C26 5.8203 20.1797 0 13 0C5.8203 0 0 5.8203 0 13C0 20.1797 5.8203 26 13 26Z"
+                                 fill="#68696E" />
+                              <path
+                                 d="M7.615 12.846L6 14.461L10.308 18.769L20 9.615L18.385 8L10.308 15.538L7.615 12.846Z"
+                                 fill="white" />
+                           </svg>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </section>
+
+      <section class="bg-[#FAF9F9] py-16 client-wrapper">
+         <div class="container md:container mx-auto md:px-4 px-4 lg:px-0">
+            <div class="whitespace-nowrap overflow-x-auto text-center client-slider">
+               <div class="w-[168px] inline-block pr-5 align-baseline">
+                  <img class="w-full" src="./src/images/Epic_games.png" alt="">
+               </div>
+               <div class="w-[168px] inline-block pr-5 align-baseline">
+                  <img class="w-full" src="./src/images/Atlassian.png" alt="">
+               </div>
+               <div class="w-[168px] inline-block pr-5 align-baseline">
+                  <img class="w-full" src="./src/images/doordash.png" alt="">
+               </div>
+               <div class="w-[168px] inline-block pr-5 align-baseline">
+                  <img class="w-full" src="./src/images/Cloudflare.png" alt="">
+               </div>
+               <div class="w-[168px] inline-block pr-5 align-baseline">
+                  <img class="w-full" src="./src/images/Github.png" alt="">
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="bg-[#FAF9F9] py-16">
+         <div class="container md:container mx-auto md:px-4 px-4 lg:px-0">
+            <h2 class="font-normal text-[#2C2C2C] text-3xl pb-5 text-center">Explore benefits of usage-based pricing
+            </h2>
+            <div class="grid lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1 py-6">
+               <div
+                  class="max-w-sm bg-[#ffffff] rounded-lg border border-t-0 border-[#CBCFCF] shadow flex flex-col h-full mx-auto">
+                  <a href="#">
+                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-1.png" alt="" />
+                  </a>
+                  <div class="h-full flex flex-col p-5">
+                     <div class=" flex-auto shrink-0">
+                        <a href="#">
+                           <h3 class="mb-2 text-2xl font-semibold -tracking-tight text-gray-900">
+                              Compare full-stack observability costs: New Relic, Datadog, and Dynatrace
+                           </h3>
+                        </a>
+                     </div>
+                     <div>
+                        <a href="#"
+                           class="inline-flex items-center py-2 text-base text-[#00838F] font-semibold text-center">
+                           Read Article&nbsp;&nbsp;
+                           <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.205025 12.2671C-0.0683422 12.5491 -0.0683422 13.0064 0.205025 13.2885C0.478392 13.5705 0.921608 13.5705 1.19498 13.2885L6.79497 7.51069C7.06834 7.22864 7.06834 6.77136 6.79497 6.48931L1.19498 0.711534C0.921608 0.429489 0.478392 0.429489 0.205025 0.711534C-0.0683422 0.993579 -0.0683422 1.45087 0.205025 1.73291L5.30999 6.99994L0.205025 12.2671Z"
+                                 fill="#00838F" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div
+                  class="max-w-sm bg-[#ffffff] rounded-lg border border-t-0 border-[#CBCFCF] shadow flex flex-col h-full mx-auto">
+                  <a href="#">
+                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-1.png" alt="" />
+                  </a>
+                  <div class="h-full flex flex-col p-5">
+                     <div class="flex-auto shrink-0">
+                        <a href="#">
+                           <h3 class="mb-2 text-2xl font-semibold -tracking-tight text-gray-900">
+                              New Relic consumption pricing: Get more value for your money
+                           </h3>
+                        </a>
+                     </div>
+                     <div>
+                        <a href="#"
+                           class="inline-flex items-center py-2 text-base text-[#00838F] font-semibold text-center">
+                           Read Article&nbsp;&nbsp;
+                           <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.205025 12.2671C-0.0683422 12.5491 -0.0683422 13.0064 0.205025 13.2885C0.478392 13.5705 0.921608 13.5705 1.19498 13.2885L6.79497 7.51069C7.06834 7.22864 7.06834 6.77136 6.79497 6.48931L1.19498 0.711534C0.921608 0.429489 0.478392 0.429489 0.205025 0.711534C-0.0683422 0.993579 -0.0683422 1.45087 0.205025 1.73291L5.30999 6.99994L0.205025 12.2671Z"
+                                 fill="#00838F" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div
+                  class="max-w-sm bg-[#ffffff] rounded-lg border border-t-0 border-[#CBCFCF] shadow flex flex-col h-full mx-auto">
+                  <a href="#">
+                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-3.png" alt="" />
+                  </a>
+                  <div class="h-full flex flex-col p-5">
+                     <div class="flex-auto shrink-0">
+                        <a href="#">
+                           <h3 class="mb-2 text-2xl font-semibold -tracking-tight text-gray-900">
+                              New Relic annual pool of funds simplifies observability pricing
+                           </h3>
+                        </a>
+                     </div>
+                     <div>
+                        <a href="#"
+                           class="inline-flex items-center py-2 text-base text-[#00838F] font-semibold text-center">
+                           Read Article&nbsp;&nbsp;
+                           <svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                 d="M0.205025 12.2671C-0.0683422 12.5491 -0.0683422 13.0064 0.205025 13.2885C0.478392 13.5705 0.921608 13.5705 1.19498 13.2885L6.79497 7.51069C7.06834 7.22864 7.06834 6.77136 6.79497 6.48931L1.19498 0.711534C0.921608 0.429489 0.478392 0.429489 0.205025 0.711534C-0.0683422 0.993579 -0.0683422 1.45087 0.205025 1.73291L5.30999 6.99994L0.205025 12.2671Z"
+                                 fill="#00838F" />
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+   </main>
+   <footer class="bg-[#2C2C2C] py-16 ">
+      <div class="relative lg:pb-16">
+         <div class="container mx-auto px-4">
+
+            <div class="flex flex-col md:flex-row">
+               <div class="basis-full lg:basis-4/12 my-5 lg:md-0 pr-3">
+                  <h3 class="text-2xl text-[#EEEFEF] pb-1">Try New Relic Today</h3>
+                  <p class="text-sm text-[#EEEFEF] pb-5">
+                     Monitor all your systems and data with the entire New Relic Platform. It's free forever.
+                  </p>
+                  <a href=""
+                     class="block w-full text-center mb-5 md:inline h-[40px] text-base text-[#EEEFEF] bg-[#00838F] py-2 px-4 rounded mr-2">
+                     Start for free
+                  </a>
+                  <a href=""
+                     class="block w-full text-center mb-5 md:inline h-[40px] text-base text-[#EEEFEF] border border-[#EEEFEF] py-2 px-4 rounded">
+                     Get a demo
+                  </a>
+                  <div class="hidden md:block lg:hidden pt-8">
+                     <h3 class="text-xs uppercase font-normal text-[#CBCFCF] leading-8">Follow US</h3>
+                     <ul class="flex flex-wrap">
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-1.png" alt=""></a></li>
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-2.png" alt=""></a></li>
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-3.png" alt=""></a></li>
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-4.png" alt=""></a></li>
+                     </ul>
+                     <ul class="flex flex-wrap">
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-5.png" alt=""></a></li>
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-6.png" alt=""></a></li>
+                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-7.png" alt=""></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="basis-full lg:basis-5/12 mb-3 md:mb-0 pr-3">
+                  <h3 class="text-xs uppercase font-normal text-[#CBCFCF] leading-8">Company</h3>
+                  <div class="flex flex-col md:flex-row">
+                     <div class="basis-full md:basis-6/12 flex flex-col">
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">About us</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Leaderships</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Careers</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Diversity and Inclusion</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Social Impact</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Newsroom</a>
+                     </div>
+                     <div class="basis-full md:basis-6/12 flex flex-col">
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Customers</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Partner Program</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Investor Relations</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Suppliers Portal</a>
+                        <a class="text-[#FFFFFF] text-sm py-2" href="">Contact Us</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="basis-full lg:basis-3/12 justify-self-end md:hidden lg:block pr-3">
+                  <h3 class="text-xs uppercase font-normal text-[#CBCFCF] leading-8">Follow US</h3>
+                  <ul class="flex items-end flex-wrap">
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-1.png" alt=""></a></li>
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-2.png" alt=""></a></li>
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-3.png" alt=""></a></li>
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-4.png" alt=""></a></li>
+                  </ul>
+                  <ul class="flex flex-wrap">
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-5.png" alt=""></a></li>
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-6.png" alt=""></a></li>
+                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-7.png" alt=""></a></li>
+                  </ul>
+               </div>
+            </div>
+
+         </div>
+         <div class="bg-footer-effects h-[100px] w-[300px] absolute left-0 bottom-8 hidden lg:block"></div>
+      </div>
+      <div class="container mx-auto px-4">
+
+         <div class="flex border-t border-[#54565A] pt-5 flex-wrap">
+            <div class="basis-full lg:basis-8/12 w-full py-2  order-2 lg:order-none">
+               <ul class="flex w-full flex-wrap">
+                  <li class="basis-6/12 lg:basis-auto">
+                     <a class="text-sm font-normal text-[#EEEFEF]" href=""> Terms of Service</a>
+                  </li>
+                  <li class="md:basis-6/12 lg:basis-auto">
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">DMCA Policy</a>
+                  </li>
+                  <li class="md:basis-6/12 lg:basis-auto">
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">Privacy Policy</a>
+                  </li>
+                  <li class="md:basis-6/12 lg:basis-auto">
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">Cookie Policy</a>
+                  </li>
+                  <li class="md:basis-6/12 lg:basis-auto">
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">
+                        UK Slavery Act of 2015
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <div class="basis-full lg:basis-4/12  order-1 py-2 lg:order-none">
+               <ul class="flex flex-wrap justify-between">
+                  <li>
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">日本語</a>
+                  </li>
+                  <li>
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">Français</a>
+                  </li>
+                  <li>
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">Deutsch</a>
+                  </li>
+                  <li>
+                     <a class="text-sm font-normal text-[#EEEFEF]" href="">한국어</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <div class="text-sm font-normal text-[#CBCFCF] pt-3">©2008-20 New Relic, Inc. All rights reserved</div>
+      </div>
+
+   </footer>
 </body>
 
 </html>
