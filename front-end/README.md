@@ -25,3 +25,22 @@ Double and triple check that everything looks good, and feel free to add comment
 Email a link back to your repository for us to review. We should be able to clone it locally, run the `npm run dev` command and verify the project. We will most likely use Google Chrome or Firefox to test out the various viewports.
 
 You have 48 hours from now to return this exercise back to us. Good luck, and feel free to reach out with any questions!
+
+
+
+Approach
+   Desktop > Tablet > Mobile
+
+Components Preparation
+   Header > Footer > Main
+
+Used 
+   Flexbox, Grid, 
+
+Assets Optimization
+
+JS optimization
+
+CSS
+   I've defined custom classes in input.css using Tailwind's @apply directive. This approach allows us to apply a consistent set of styles by simply using these predefined classes on elements, eliminating the need to repeatedly add the same utility classes directly to each element.
+

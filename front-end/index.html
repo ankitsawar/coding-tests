@@ -9,10 +9,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet">
-
    <link href="src/css/output.css" rel="stylesheet">
-   <script src="src/js/index.js" type="text/javascript"></script>
-
 </head>
 
 <body>
@@ -20,7 +17,7 @@
       <nav class="p-4 bg-gray-800 text-gray-200 container mx-auto">
          <div class="flex justify-between items-center">
             <div class="flex items-center">
-               <img src="./src/images/new-relic-logo.png" alt="New Relic" srcset="">
+               <img src="./src/images/new-relic-logo.png" alt="New Relic" loading="eager">
             </div>
 
             <!-- MOBILE NAV ICON -->
@@ -54,18 +51,6 @@
                   <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Solutions</a></li>
                   <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">Help Center</a></li>
                   <li class="mx-3"><a class="text-[16px] text-[#54565A] leading-8" href="">About</a></li>
-                  <!-- <li class="text-lg pr-8 "><a href=""
-                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-                     style="text-underline-offset: 8px;">Home</a></li>
-               <li class="text-lg pr-8"><a href=""
-                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-                     style="text-underline-offset: 8px;">About</a></li>
-               <li class="text-lg pr-8"><a href=""
-                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-                     style="text-underline-offset: 8px;">Blog</a></li>
-               <li class="text-lg pr-8"><a href=""
-                     class="transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-                     style="text-underline-offset: 8px;">Contact</a></li> -->
                </ul>
             </div>
 
@@ -117,24 +102,12 @@
                      Sign up
                   </a>
                </li>
-               <!-- <a href="#"
-               class="block text-gray-200 cursor-pointer py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-               style="text-underline-offset: 8px;">Home</a>
-            <a href="#"
-               class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-               style="text-underline-offset: 8px;">About</a>
-            <a href="#"
-               class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-               style="text-underline-offset: 8px;">Blog</a>
-            <a href="#"
-               class="block text-gray-200 cursor-pointer mt-1 py-3 transition duration-300 focus:outline-none focus:text-yellow-500 focus:underline hover:underline hover:text-yellow-500"
-               style="text-underline-offset: 8px;">Contact</a> -->
             </div>
          </div>
       </nav>
    </header>
    <main class="lg:pt-[95px] md:px-4 md:pt-[80px] sm:px-4 pt-[64px]">
-      <section class="bg-[#ffffff]">
+      <section class="bg-[#ffffff] default-hide">
          <div class="container md:container sm:container mx-auto ">
             <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
                <div class="hidden md:block">
@@ -157,11 +130,7 @@
          </div>
       </section>
 
-      <section>
-         <div class="container mx-auto"></div>
-      </section>
-
-      <section>
+      <section class="default-hide">
          <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 lg:gap-0 sm:grid-cols-1 shadow-lg">
                <div class="pricing-card lg:border-r-0 lg:rounded-l-lg">
@@ -372,7 +341,7 @@
                   </div>
                </div>
                <div class="pricing-card lg:border-r-0">
-                  <div class="pricing-card-heading bg-[#FF8853] lg:rounded-none">
+                  <div class="pricing-card-heading bg-[#2C2C2C] lg:rounded-none">
                      Enterprise
                   </div>
                   <div class="pricing-card-details">
@@ -440,7 +409,7 @@
          </div>
       </section>
 
-      <section class="py-16 hidden lg:block">
+      <section class="py-16 hidden lg:block default-hide">
          <div class="container mx-auto">
             <h3 class="text-2xl font-semibold text-[#2C2C2C] text-center py-16 tracking-tighter">
                Compare features and plans
@@ -638,23 +607,38 @@
          </div>
       </section>
 
-      <section class="bg-[#FAF9F9] py-16 client-wrapper">
+      <section class="bg-[#FAF9F9] py-16 client-wrapper default-hid">
          <div class="container md:container mx-auto md:px-4 px-4 lg:px-0">
             <div class="whitespace-nowrap overflow-x-auto text-center client-slider">
                <div class="w-[168px] inline-block pr-5 align-baseline">
-                  <img class="w-full" src="./src/images/Epic_games.png" alt="">
+                  <picture>
+                     <source srcset="./src/images/Epic_games.png" type="image/png">
+                     <img class="w-full" src="./src/images/Epic_games.png" alt="epic games" loading="lazy">
+                  </picture>
                </div>
                <div class="w-[168px] inline-block pr-5 align-baseline">
-                  <img class="w-full" src="./src/images/Atlassian.png" alt="">
+                  <picture>
+                     <source srcset="./src/images/Atlassian.png" type="image/png">
+                     <img class="w-full" src="./src/images/Atlassian.png" alt="Atlassian" loading="lazy">
+                  </picture>
                </div>
                <div class="w-[168px] inline-block pr-5 align-baseline">
-                  <img class="w-full" src="./src/images/doordash.png" alt="">
+                  <picture>
+                     <source srcset="./src/images/doordash.png" type="image/png">
+                     <img class="w-full" src="./src/images/doordash.png" alt="doordash" loading="lazy">
+                  </picture>
                </div>
                <div class="w-[168px] inline-block pr-5 align-baseline">
-                  <img class="w-full" src="./src/images/Cloudflare.png" alt="">
+                  <picture>
+                     <source srcset="./src/images/Cloudflare.png" type="image/png">
+                     <img class="w-full" src="./src/images/Cloudflare.png" alt="Cloudflare" loading="lazy">
+                  </picture>
                </div>
                <div class="w-[168px] inline-block pr-5 align-baseline">
-                  <img class="w-full" src="./src/images/Github.png" alt="">
+                  <picture>
+                     <source srcset="./src/images/Github.png" type="image/png">
+                     <img class="w-full" src="./src/images/Github.png" alt="Github" loading="lazy">
+                  </picture>
                </div>
             </div>
          </div>
@@ -667,13 +651,14 @@
             <div class="grid lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1 py-6">
                <div
                   class="max-w-sm bg-[#ffffff] rounded-lg border border-t-0 border-[#CBCFCF] shadow flex flex-col h-full mx-auto">
-                  <a href="#">
-                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-1.png" alt="" />
-                  </a>
+                  <picture>
+                     <source srcset="./src/images/cards/card-1.png" type="image/png" />
+                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-1.png" alt="card" loading="lazy" />
+                  </picture>
                   <div class="h-full flex flex-col p-5">
                      <div class=" flex-auto shrink-0">
                         <a href="#">
-                           <h3 class="mb-2 text-2xl font-semibold -tracking-tight text-gray-900">
+                           <h3 class="mb-2 text-[22px] lg:text-2xl font-semibold -tracking-tight text-gray-900">
                               Compare full-stack observability costs: New Relic, Datadog, and Dynatrace
                            </h3>
                         </a>
@@ -694,12 +679,16 @@
                <div
                   class="max-w-sm bg-[#ffffff] rounded-lg border border-t-0 border-[#CBCFCF] shadow flex flex-col h-full mx-auto">
                   <a href="#">
-                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-1.png" alt="" />
+                     <picture>
+                        <source srcset="./src/images/cards/card-1.png" type="image/png" />
+                        <img class="rounded-t-lg w-full" src="./src/images/cards/card-1.png" alt="card"
+                           loading="lazy" />
+                     </picture>
                   </a>
                   <div class="h-full flex flex-col p-5">
                      <div class="flex-auto shrink-0">
                         <a href="#">
-                           <h3 class="mb-2 text-2xl font-semibold -tracking-tight text-gray-900">
+                           <h3 class="mb-2 text-[22px] text-2xl font-semibold -tracking-tight text-gray-900">
                               New Relic consumption pricing: Get more value for your money
                            </h3>
                         </a>
@@ -720,12 +709,16 @@
                <div
                   class="max-w-sm bg-[#ffffff] rounded-lg border border-t-0 border-[#CBCFCF] shadow flex flex-col h-full mx-auto">
                   <a href="#">
-                     <img class="rounded-t-lg w-full" src="./src/images/cards/card-3.png" alt="" />
+                     <picture>
+                        <source srcset="./src/images/cards/card-3.png" type="image/png" />
+                        <img class="rounded-t-lg w-full" src="./src/images/cards/card-3.png" alt="card"
+                           loading="lazy" />
+                     </picture>
                   </a>
                   <div class="h-full flex flex-col p-5">
                      <div class="flex-auto shrink-0">
                         <a href="#">
-                           <h3 class="mb-2 text-2xl font-semibold -tracking-tight text-gray-900">
+                           <h3 class="mb-2 text-[22px] text-2xl font-semibold -tracking-tight text-gray-900">
                               New Relic annual pool of funds simplifies observability pricing
                            </h3>
                         </a>
@@ -748,12 +741,11 @@
       </section>
 
    </main>
-   <footer class="bg-[#2C2C2C] py-16 ">
+   <footer class="bg-[#2C2C2C] py-16">
       <div class="relative lg:pb-16">
          <div class="container mx-auto px-4">
-
             <div class="flex flex-col md:flex-row">
-               <div class="basis-full lg:basis-4/12 my-5 lg:md-0 pr-3">
+               <div class="basis-full lg:basis-4/12 mb-5 lg:md-0 pr-3">
                   <h3 class="text-2xl text-[#EEEFEF] pb-1">Try New Relic Today</h3>
                   <p class="text-sm text-[#EEEFEF] pb-5">
                      Monitor all your systems and data with the entire New Relic Platform. It's free forever.
@@ -767,77 +759,89 @@
                      Get a demo
                   </a>
                   <div class="hidden md:block lg:hidden pt-8">
-                     <h3 class="text-xs uppercase font-normal text-[#CBCFCF] leading-8">Follow US</h3>
-                     <ul class="flex flex-wrap">
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-1.png" alt=""></a></li>
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-2.png" alt=""></a></li>
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-3.png" alt=""></a></li>
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-4.png" alt=""></a></li>
+                     <h3 class="footer-headings">Follow US</h3>
+                     <ul class="follow-link-wrap">
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-1.png" alt="follow link"
+                                 loading="lazy"></a></li>
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-2.png" alt="follow link"
+                                 loading="lazy"></a></li>
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-3.png" alt="follow link"
+                                 loading="lazy"></a></li>
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-4.png" alt="follow link"
+                                 loading="lazy"></a></li>
                      </ul>
-                     <ul class="flex flex-wrap">
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-5.png" alt=""></a></li>
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-6.png" alt=""></a></li>
-                        <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-7.png" alt=""></a></li>
+                     <ul class="follow-link-wrap">
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-5.png" alt="follow link"
+                                 loading="lazy"></a></li>
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-6.png" alt="follow link"
+                                 loading="lazy"></a></li>
+                        <li class="follow-link"><a href=""><img src="./src/images/follow-us-7.png" alt="follow link"
+                                 loading="lazy"></a></li>
                      </ul>
                   </div>
                </div>
                <div class="basis-full lg:basis-5/12 mb-3 md:mb-0 pr-3">
-                  <h3 class="text-xs uppercase font-normal text-[#CBCFCF] leading-8">Company</h3>
+                  <h3 class="footer-headings">Company</h3>
                   <div class="flex flex-col md:flex-row">
-                     <div class="basis-full md:basis-6/12 flex flex-col">
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">About us</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Leaderships</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Careers</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Diversity and Inclusion</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Social Impact</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Newsroom</a>
+                     <div class="site-links-wrap">
+                        <a class="site-link" href="">About us</a>
+                        <a class="site-link" href="">Leaderships</a>
+                        <a class="site-link" href="">Careers</a>
+                        <a class="site-link" href="">Diversity and Inclusion</a>
+                        <a class="site-link" href="">Social Impact</a>
+                        <a class="site-link" href="">Newsroom</a>
                      </div>
-                     <div class="basis-full md:basis-6/12 flex flex-col">
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Customers</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Partner Program</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Investor Relations</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Suppliers Portal</a>
-                        <a class="text-[#FFFFFF] text-sm py-2" href="">Contact Us</a>
+                     <div class="site-links-wrap">
+                        <a class="site-link" href="">Customers</a>
+                        <a class="site-link" href="">Partner Program</a>
+                        <a class="site-link" href="">Investor Relations</a>
+                        <a class="site-link" href="">Suppliers Portal</a>
+                        <a class="site-link" href="">Contact Us</a>
                      </div>
                   </div>
                </div>
                <div class="basis-full lg:basis-3/12 justify-self-end md:hidden lg:block pr-3">
-                  <h3 class="text-xs uppercase font-normal text-[#CBCFCF] leading-8">Follow US</h3>
-                  <ul class="flex items-end flex-wrap">
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-1.png" alt=""></a></li>
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-2.png" alt=""></a></li>
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-3.png" alt=""></a></li>
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-4.png" alt=""></a></li>
+                  <h3 class="footer-headings">Follow US</h3>
+                  <ul class="follow-link-wrap items-center py-2">
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-1.png" alt="follow link"
+                              loading="lazy"></a></li>
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-2.png" alt="follow link"
+                              loading="lazy"></a></li>
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-3.png" alt="follow link"
+                              loading="lazy"></a></li>
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-4.png" alt="follow link"
+                              loading="lazy"></a></li>
                   </ul>
-                  <ul class="flex flex-wrap">
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-5.png" alt=""></a></li>
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-6.png" alt=""></a></li>
-                     <li class="mr-3 mb-3"><a href=""><img src="./src/images/follow-us-7.png" alt=""></a></li>
+                  <ul class="follow-link-wrap">
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-5.png" alt="follow link"
+                              loading="lazy"></a></li>
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-6.png" alt="follow link"
+                              loading="lazy"></a></li>
+                     <li class="follow-link"><a href=""><img src="./src/images/follow-us-7.png" alt="follow link"
+                              loading="lazy"></a></li>
                   </ul>
                </div>
             </div>
-
          </div>
          <div class="bg-footer-effects h-[100px] w-[300px] absolute left-0 bottom-8 hidden lg:block"></div>
       </div>
       <div class="container mx-auto px-4">
-
          <div class="flex border-t border-[#54565A] pt-5 flex-wrap">
             <div class="basis-full lg:basis-8/12 w-full py-2  order-2 lg:order-none">
                <ul class="flex w-full flex-wrap">
-                  <li class="basis-6/12 lg:basis-auto">
+                  <li class="basis-6/12 lg:basis-auto pr-4">
                      <a class="text-sm font-normal text-[#EEEFEF]" href=""> Terms of Service</a>
                   </li>
-                  <li class="md:basis-6/12 lg:basis-auto">
+                  <li class="md:basis-6/12 lg:basis-auto pr-4">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">DMCA Policy</a>
                   </li>
-                  <li class="md:basis-6/12 lg:basis-auto">
+                  <li class="md:basis-6/12 lg:basis-auto pr-4">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">Privacy Policy</a>
                   </li>
-                  <li class="md:basis-6/12 lg:basis-auto">
+                  <li class="md:basis-6/12 lg:basis-auto pr-4">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">Cookie Policy</a>
                   </li>
-                  <li class="md:basis-6/12 lg:basis-auto">
+                  <li class="md:basis-6/12 lg:basis-auto pr-4">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">
                         UK Slavery Act of 2015
                      </a>
@@ -845,17 +849,17 @@
                </ul>
             </div>
             <div class="basis-full lg:basis-4/12  order-1 py-2 lg:order-none">
-               <ul class="flex flex-wrap justify-between">
-                  <li>
+               <ul class="flex flex-wrap lg:justify-end justify-start">
+                  <li class="pr-5">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">日本語</a>
                   </li>
-                  <li>
+                  <li class="pr-5">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">Français</a>
                   </li>
-                  <li>
+                  <li class="pr-5">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">Deutsch</a>
                   </li>
-                  <li>
+                  <li class="pr-5">
                      <a class="text-sm font-normal text-[#EEEFEF]" href="">한국어</a>
                   </li>
                </ul>
@@ -863,8 +867,8 @@
          </div>
          <div class="text-sm font-normal text-[#CBCFCF] pt-3">©2008-20 New Relic, Inc. All rights reserved</div>
       </div>
-
    </footer>
+   <script src="src/js/index.js" type="text/javascript" defer></script>
 </body>
 
 </html>

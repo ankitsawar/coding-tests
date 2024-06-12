@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+   .default-hide {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+   }
 
+   .show {
+      opacity: 1;
+   }
+}
 
 @layer utilities {
    .pricing-card {
@@ -31,6 +40,27 @@
 
    .pricing-card-details-title {
       @apply text-2xl font-semibold tracking-tight;
+   }
+
+
+   .footer-headings {
+      @apply text-xs uppercase font-normal text-[#CBCFCF] leading-8;
+   }
+
+   .follow-link-wrap {
+      @apply flex flex-wrap;
+   }
+
+   .follow-link {
+      @apply mr-3 mb-3;
+   }
+
+   .site-links-wrap {
+      @apply basis-full md:basis-6/12 flex flex-col;
+   }
+
+   .site-link {
+      @apply text-[#FFFFFF] text-sm py-2;
    }
 }
 
