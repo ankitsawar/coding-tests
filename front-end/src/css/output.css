@@ -888,6 +888,10 @@ video {
   display: list-item;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
 .hidden {
   display: none;
 }
@@ -2947,6 +2951,7 @@ video {
 }
 
 .pricing-card-details-title {
+  margin-top: 0.75rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
@@ -3186,6 +3191,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:invisible {
+    visibility: hidden;
+  }
+
   .lg\:order-none {
     order: 0;
   }

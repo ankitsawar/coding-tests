@@ -165,7 +165,9 @@
                                  </span>
                               </span>
                            </li>
-                           <li class="pricing-card-details-bullet invisible">invisible</li>
+                           <li class="pricing-card-details-bullet invisible">
+                              invisible
+                           </li>
                         </ul>
                         <div class="flex-1">
                            <button type="button" class="pricing-card-details-cta  text-[#ffffff] bg-[#00838F]">
@@ -188,12 +190,12 @@
                                  Standard retention
                               </span>
                            </li>
-                           <li class="pricing-card-details-bullet invisible">
-                              <span class="text-sm text-[#2C2C2C] ml-5">
+                           <li class="pricing-card-details-bullet !hidden lg:block  lg:invisible">
+                              <span class="text-sm text-[#2C2C2C] ml-5 ">
                                  Standard retention
                               </span>
                            </li>
-                           <li class="pricing-card-details-bullet invisible">
+                           <li class="pricing-card-details-bullet !hidden lg:block  lg:invisible">
                               <span class="text-sm text-[#2C2C2C] ml-5">
                                  Standard retention
                               </span>
@@ -263,10 +265,10 @@
                                  Standard retention
                               </span>
                            </li>
-                           <li class="pricing-card-details-bulle invisible">
+                           <li class="pricing-card-details-bulle !hidden lg:block  lg:invisible">
                               Standard retention
                            </li>
-                           <li class="pricing-card-details-bullet invisible">
+                           <li class="pricing-card-details-bullet !hidden lg:block  lg:invisible">
                               Standard retention
                            </li>
                         </ul>
@@ -328,12 +330,14 @@
                            </li>
                            <li class="pricing-card-details-bullet">
                               <span class="text-sm text-[#2C2C2C] ml-5">
-                                 Advanced admin features
+                                 Advanced admin features<br />
+                                 <span class="invisible">Advanced admin features</span>
                               </span>
                            </li>
                            <li class="pricing-card-details-bullet">
                               <span class="text-sm text-[#2C2C2C] ml-5">
-                                 24x7 support availability
+                                 24x7 support availability<br />
+                                 <span class="invisible">24*7 support availability</span>
                               </span>
                            </li>
                         </ul>
@@ -368,7 +372,7 @@
                                  Predictable full platform & core user commit pricing
                               </span>
                            </li>
-                           <li class="pricing-card-details-bullet invisible">invisible</li>
+                           <li class="pricing-card-details-bullet !hidden lg:block  lg:invisible">invisible</li>
                         </ul>
                         <div class="flex-1">
                            <button type="button"
@@ -377,7 +381,7 @@
                            </button>
                         </div>
                         <div class="!mt-6 !mb-4 border-t border-[#CBCFCF]"></div>
-                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1">
+                        <ul role="list" class="space-y-5 my-7 flex flex-col basis-1/4 flex-1 h-full">
                            <li class="pricing-card-details-bullet">
                               <span class="text-sm text-[#2C2C2C] ml-5">
                                  Unlimited basic users, <br />
@@ -607,7 +611,7 @@
          </div>
       </section>
 
-      <section class="bg-[#FAF9F9] py-16 client-wrapper default-hid">
+      <section class=" py-16 client-wrapper default-hide">
          <div class="container md:container mx-auto md:px-4 px-4 lg:px-0">
             <div class="whitespace-nowrap overflow-x-auto text-center client-slider">
                <div class="w-[168px] inline-block pr-5 align-baseline">
@@ -644,7 +648,7 @@
          </div>
       </section>
 
-      <section class="bg-[#FAF9F9] py-16">
+      <section class="bg-[#FAF9F9] py-16 default-hide">
          <div class="container md:container mx-auto md:px-4 px-4 lg:px-0">
             <h2 class="font-normal text-[#2C2C2C] text-3xl pb-5 text-center">Explore benefits of usage-based pricing
             </h2>
@@ -741,7 +745,7 @@
       </section>
 
    </main>
-   <footer class="bg-[#2C2C2C] py-16">
+   <footer class="bg-[#2C2C2C] py-16 default-hide">
       <div class="relative lg:pb-16">
          <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row">
